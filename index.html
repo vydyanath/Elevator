@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elevator Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-section">
+      <h2>Elevator Simulation</h2>
+      
+      <div>
+        <label for="initial-floor">Initial Floor:</label>
+        <input type="number" id="initial-floor" min="1" max="9">
+        <button id="set-initial" onclick="setInitialFloor()">Set Initial Floor</button>
+      </div>
+      
+      <div id="current-floor">Current Floor: Not Set</div>
+
+      <div id="floor-buttons" class="calculator-grid">
+        <button onclick="selectFloor(1)">1</button>
+        <button onclick="selectFloor(2)">2</button>
+        <button onclick="selectFloor(3)">3</button>
+        <button onclick="selectFloor(4)">4</button>
+        <button onclick="selectFloor(5)">5</button>
+        <button onclick="selectFloor(6)">6</button>
+        <button onclick="selectFloor(7)">7</button>
+        <button onclick="selectFloor(8)">8</button>
+        <button onclick="selectFloor(9)">9</button>
+      </div>
+
+      <div id="selected-floors">Selected Floors: </div>
+
+      <button id="simulate" onclick="simulateElevator()" disabled>Simulate</button>
+    </div>
+
+    <div class="right-section">
+      <div class="elevator-shaft">
+        <div class="elevator" id="elevator">Elevator</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
